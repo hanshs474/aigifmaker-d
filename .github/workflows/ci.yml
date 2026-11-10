@@ -1,0 +1,11 @@
+name: ci
+on: [push, workflow_dispatch]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dlang-community/setup-dlang@v2
+        with: { compiler: ldc-latest }
+      - run: AIGIFMAKER_SMOKE=1 dub test
+      - run: dub build -c cli

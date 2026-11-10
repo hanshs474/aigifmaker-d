@@ -1,0 +1,13 @@
+{
+  "name": "aigifmaker",
+  "description": "Official SDK for AI GIF Maker (aigifmaker.ai): turn text into animated GIFs.",
+  "homepage": "https://aigifmaker.ai/?utm_source=dub&utm_medium=package",
+  "authors": ["AI GIF Maker"],
+  "copyright": "Copyright (c) 2026 AI GIF Maker",
+  "license": "MIT",
+  "targetType": "library",
+  "configurations": [
+    { "name": "library", "targetType": "library", "excludedSourceFiles": ["source/app.d"] },
+    { "name": "cli", "targetType": "executable", "targetName": "aigifmaker", "mainSourceFile": "source/app.d" }
+  ]
+}
